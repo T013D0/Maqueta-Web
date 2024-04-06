@@ -2,7 +2,7 @@
   display: none;
   width: 90%;
   margin: auto;
-  object-fit: cover;
+  object-fit: contain;
   height: 20rem;
 }
 .w3-left,
@@ -86,13 +86,9 @@
   object-fit: contain;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 890px) {
   .categories-list {
     flex-direction: column;
-  }
-  .category-card img {
-    width: 10rem;
-    height: 10rem;
   }
 }
 @media screen and (max-width: 480px) {

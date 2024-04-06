@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/global.css" />
+    <link rel="stylesheet" href="../static/css/navbar.css" />
+    <link rel="stylesheet" href="../static/css/footer.css" />
+    <link rel="stylesheet" href="../static/css/product_view.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <div class="paste-button">
+            <a href="store.html" class="button">Store</a>
+            <div class="dropdown-content">
+              <a id="top" href="./store/notebook.html">Notebooks</a>
+              <a id="middle" href="./store/desktop.html">Desktop</a>
+              <a id="bottom" href="./store/allinone.html">All in One</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-logo">
+          <a href="index.html">
+            <img src="../static/src/logo.webp" alt="Logo" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="./admin/login.html">Login</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="section-container">
+      <div class="header">
+        <div
+          class="product-img--main prod-img"
+          data-scale="1.6"
+          data-image="../static/src/ALLINONE.png"
+        ></div>
+        <section class="information">
+          <h3>All in One</h3>
+          <p>
+            Este all in one se queda callampin bombin con la ram porque no tiene
+          </p>
+          <details>
+            <summary>Details</summary>
+            <ul>
+              <li>Amd Ryzen 7 7700 x3D</li>
+              <li>32 Ram DDr5</li>
+              <li>1TB SSD</li>
+              <li>RTX 3090</li>
+            </ul>
+          </details>
+        </section>
+        <script>
+          $(document).ready(function () {
+            $(".product-img--main")
+              // tile mouse actions
+              .on("mouseover", function () {
+                $(this)
+                  .children(".product-img--main__image")
+                  .css({
+                    transform: "scale(" + $(this).attr("data-scale") + ")",
+                  });
+              })
+              .on("mouseout", function () {
+                $(this)
+                  .children(".product-img--main__image")
+                  .css({ transform: "scale(1)" });
+              })
+              .on("mousemove", function (e) {
+                $(this)
+                  .children(".product-img--main__image")
+                  .css({
+                    "transform-origin":
+                      ((e.pageX - $(this).offset().left) / $(this).width()) *
+                        100 +
+                      "% " +
+                      ((e.pageY - $(this).offset().top) / $(this).height()) *
+                        100 +
+                      "%",
+                  });
+              })
+              // tiles set up
+              .each(function () {
+                $(this)
+                  // add a image container
+                  .append('<div class="product-img--main__image"></div>')
+                  // set up a background image for each tile based on data-image attribute
+                  .children(".product-img--main__image")
+                  .css({
+                    "background-image":
+                      "url(" + $(this).attr("data-image") + ")",
+                  });
+              });
+          });
+        </script>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h1>About us</h1>
+          <p>
+            Somos una empresa dedicada a la venta de productos de tecnología de
+            alta calidad.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h1>Quick Links</h1>
+          <ul>
+            <a href="index.html">
+              <li>Home</li>
+            </a>
+            <a href="store.html">
+              <li>Store</li>
+            </a>
+            <a href="about.html">
+              <li>About</li>
+            </a>
+            <a href="support.html">
+              <li>Login</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer-section contact-form">
+          <h1>Contact us</h1>
+          <form action="index.html" method="post">
+            <input
+              type="email"
+              name="email"
+              class="text-input contact-input"
+              placeholder="Your email address..."
+            />
+            <textarea
+              name="message"
+              class="text-input contact-input"
+              placeholder="Your message..."
+            ></textarea>
+            <button type="submit" class="btn btn-big">
+              <i class="fas fa-envelope"></i>
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">2024 &copy; masterRace.com</div>
+    </footer>
+  </body>
+</html>
