@@ -1,5 +1,6 @@
 nav {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: center;
   background-color: var(--nav-color);
@@ -90,7 +91,16 @@ nav {
 
 /* Responsive navbar*/
 .hamburger {
+  position: absolute;
+  top: 0;
+
   display: none;
+}
+
+.nav-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bar {
@@ -101,6 +111,13 @@ nav {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: white;
+}
+
+.fa-cart-shopping {
+  color: white;
+  position: relative;
+  font-size: x-large;
+  padding: 2rem;
 }
 
 @media screen and (max-width: 600px) {

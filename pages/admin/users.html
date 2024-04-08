@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../static/css/global.css" />
     <link rel="stylesheet" href="../../static/css/sidebar.css" />
     <link rel="stylesheet" href="../../static/css/footer.css" />
-    <link rel="stylesheet" href="../../static/css/login.css" />
+    <link rel="stylesheet" href="../../static/css/admin.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,7 +18,7 @@
       <nav class="main-menu">
         <ul>
           <li>
-            <a href="../index.html">
+            <a href="./admin.html">
               <i class="fa fa-solid fa-house fa-2x"></i>
               <span class="nav-text"> Home </span>
             </a>
@@ -55,7 +55,31 @@
           </li>
         </ul>
       </nav>
-      <div>Gestion de productos</div>
+      <div class="full-width">
+        <table class="table">
+          <thead>
+            <th>
+              <tr class="table-row">
+                <td>Name</td>
+                <td>Email</td>
+                <td>Register Date</td>
+              </tr>
+            </th>
+          </thead>
+          <tbody class="bg-nav">
+            <tr class="table-row-body">
+              <td>John Doe</td>
+              <td>test@example.com</td>
+              <td>2021-10-10</td>
+            </tr>
+            <tr class="table-row-body">
+              <td>Jane Doe</td>
+              <td>test@example.com</td>
+              <td>2021-10-10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </body>
 </html>

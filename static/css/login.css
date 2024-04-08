@@ -60,6 +60,8 @@
   cursor: pointer;
   transition: all 250ms;
   width: 100%;
+  text-align: center;
+  text-decoration: none;
 }
 .register-btn:hover {
   background-color: var(--primary);
