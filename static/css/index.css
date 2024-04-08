@@ -76,7 +76,14 @@
   background-color: var(--nav-color);
   transition: all 250ms;
   cursor: pointer;
+  color: white;
+  text-decoration: none;
 }
+
+.pablito {
+  border-radius: 1.25rem;
+}
+
 .category-card:hover {
   transform: scale(1.1);
 }
