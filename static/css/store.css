@@ -161,3 +161,26 @@
   border-color: var(--primary);
   box-shadow: 0 0 20px #4c8bf580;
 }
+
+@media screen and (max-width: 600px) {
+  .section-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .left-bar {
+    width: 100%;
+    position: relative;
+  }
+  .categories-container {
+    padding: 0%;
+    justify-content: center;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+}
+
+@media screen and (min-width: 900px) {
+}
