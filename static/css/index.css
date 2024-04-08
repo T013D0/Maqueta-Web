@@ -80,10 +80,6 @@
   text-decoration: none;
 }
 
-.pablito {
-  border-radius: 1.25rem;
-}
-
 .category-card:hover {
   transform: scale(1.1);
 }
@@ -93,14 +89,17 @@
   object-fit: contain;
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 600px) {
   .categories-list {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 480px) {
-  .category-card img {
-    width: 8rem;
-    height: 8rem;
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .categories-list {
+    flex-direction: column;
+    justify-content: center;
   }
+}
+
+@media screen and (min-width: 900px) {
 }
