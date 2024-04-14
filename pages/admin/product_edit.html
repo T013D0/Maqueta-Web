@@ -50,42 +50,49 @@
     </div>
     <section class="home-section">
       <div class="home-head">
-        <h1>Users</h1>
-        <form action="#">
-          <div class="contain">
-            <label for="userSearch">Search a user</label>
-            <input type="text" name="userSearch" id="userSearch" />
-          </div>
-          <button class="btn">Search</button>
-        </form>
+        <h1>Product 1</h1>
       </div>
-      <table class="prod-table bg-white">
-        <thead class="table-head">
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th class="respon">Email</th>
-            <th class="respon">Role</th>
-            <th class="respon">Addres</th>
-          </tr>
-        </thead>
-        <tbody class="table-body">
-          <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td class="respon">test@example.com</td>
-            <td class="respon">Admin</td>
-            <td class="respon">1234 Main St, New York, NY 10030</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jane Doe</td>
-            <td class="respon">test@example.com</td>
-            <td class="respon">User</td>
-            <td class="respon">1234 Main St, New York, NY 10030</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="order-info">
+        <div class="order-information">
+          <label>
+            <strong>Product ID: </strong>
+            <small>1</small>
+          </label>
+          <label>
+            <strong>Product Name: </strong>
+            <small>
+              <input type="text" value="Product 1" />
+            </small>
+          </label>
+          <label>
+            <strong>Product Price: </strong
+            ><small>$<input type="number" value="1000" /></small
+          ></label>
+          <label
+            ><strong>Product Description: </strong
+            ><small>
+              <textarea name="" id="" cols="30" rows="10"></textarea></small
+          ></label>
+          <label
+            ><strong>Product Category: </strong
+            ><small><input type="text" value="Category 1" /></small
+          ></label>
+          <label
+            ><strong>Product Stock: </strong
+            ><small><input type="number" value="10" /></small
+          ></label>
+          <button class="btn full-width">Save</button>
+          <button class="btn full-width">Delete</button>
+        </div>
+        <div class="order-information">
+          <img
+            src="../../static/src/ALLINONE.png"
+            class="product-image"
+            alt="product image"
+          />
+          <button class="btn full-width">Save</button>
+        </div>
+      </div>
     </section>
   </body>
 </html>

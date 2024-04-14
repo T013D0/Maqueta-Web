@@ -50,63 +50,65 @@
     </div>
     <section class="home-section">
       <div class="home-head">
-        <h1>Orders</h1>
+        <h1>Products</h1>
         <form action="#">
           <div class="contain">
-            <label for="orderSearch">Search a order</label>
-            <input type="text" name="orderSearch" id="orderSearch" />
+            <label for="productSearch">Search a product</label>
+            <input type="text" name="productSearch" id="productSearch" />
           </div>
           <button class="btn">Search</button>
         </form>
+        <a class="btn" href="./product_add.html"><i class="fa-solid fa-plus"></i> Add Product</a>
       </div>
       <table class="prod-table bg-white">
         <thead class="table-head">
           <tr>
-            <th>Order ID</th>
-            <th class="respon">Product</th>
-            <th class="respon">Quantity</th>
+            <th>Id</th>
+            <th>Name</th>
             <th class="respon">Price</th>
-            <th >Customer</th>
-            <th class="respon">Address</th>
-            <th class="respon">Phone</th>
-            <th class="respon">Status</th>
-            <th>Action</th>
+            <th class="respon">Stock</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody class="table-body">
           <tr>
             <td>1</td>
-            <td class="respon">Desktop</td>
-            <td class="respon">1</td>
-            <td class="respon">$500</td>
-            <td>John Doe</td>
-            <td class="respon">1234 Main St</td>
-            <td class="respon">123-456-7890</td>
-            <td class="status respon">Delivered</td>
-            <td><a href="./order_view.html">View</a></td>
+            <td>Macbook Pro</td>
+            <td class="respon">$2000</td>
+            <td class="respon">10</td>
+            <td class="buttons">
+              <a class="" href="./product_edit.html">Edit</a>
+              <a class="delete"> <i class="fa-solid fa-trash respon"></i> Delete </a>
+            </td>
           </tr>
           <tr>
-            <td>2</td>
-            <td class="respon">Notebook</td>
-            <td class="respon">2</td>
+            <td>1</td>
+            <td>Asus Eco 14</td>
+            <td class="respon">$800</td>
+            <td class="respon">50</td>
+            <td class="buttons">
+              <a class="" href="./product_edit.html">Edit</a>
+              <a class="delete"> <i class="fa-solid fa-trash respon"></i> Delete </a>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>HP Pavilion</td>
             <td class="respon">$1000</td>
-            <td>Jane Doe</td>
-            <td class="respon">5678 Elm St</td>
-            <td class="respon">098-765-4321</td>
-            <td class="status respon">Delivered</td>
-            <td><a href="./order_view.html">View</a></td>
+            <td class="respon">20</td>
+            <td class="buttons">
+              <a class="" href="./product_edit.html">Edit</a>
+              <a class="delete"> <i class="fa-solid fa-trash respon"></i> Delete </a>
+            </td>
           </tr>
-          <tr>
-            <td>3</td>
-            <td class="respon">All in One</td>
-            <td class="respon">3</td>
-            <td class="respon">$1500</td>
-            <td>John Smith</td>
-            <td class="respon">9101 Oak St</td>
-            <td class="respon">135-792-4680</td>
-            <td class="status respon">Delivered</td>
-            <td><a href="./order_view.html">View</a></td>
-          </tr>
+          <script>
+            const deleteBtns = document.querySelectorAll(".delete");
+            deleteBtns.forEach((btn) => {
+              btn.addEventListener("click", () => {
+                btn.parentElement.parentElement.remove();
+              });
+            });
+          </script>
         </tbody>
       </table>
     </section>
