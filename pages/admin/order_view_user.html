@@ -4,49 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech - o - Computers</title>
-    <link rel="stylesheet" href="../static/css/global.css" />
-    <link rel="stylesheet" href="../static/css/navbar.css" />
-    <link rel="stylesheet" href="../static/css/footer.css" />
-    <link rel="stylesheet" href="../static/css/payment.css" />
+    <link rel="stylesheet" href="../../static/css/global.css" />
+    <link rel="stylesheet" href="../../static/css/navbar.css" />
+    <link rel="stylesheet" href="../../static/css/footer.css" />
+    <link rel="stylesheet" href="../../static/css/admin.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <nav class="">
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="index.html">Home</a>
+          <a href="../index.html">Home</a>
         </li>
         <li class="nav-item">
           <div class="paste-button">
-            <a href="store.html" class="button">Store</a>
+            <a href="../store.html" class="button">Store</a>
             <div class="dropdown-content">
-              <a id="top" href="./store/notebook.html">Notebooks</a>
-              <a id="middle" href="./store/desktop.html">Desktop</a>
-              <a id="bottom" href="./store/allinone.html">All in One</a>
+              <a id="top" href="../store/notebook.html">Notebooks</a>
+              <a id="middle" href="../store/desktop.html">Desktop</a>
+              <a id="bottom" href="../store/allinone.html">All in One</a>
             </div>
           </div>
         </li>
         <li class="nav-logo">
-          <a href="index.html">
-            <img src="../static/src/logo.webp" alt="Logo" />
+          <a href="../index.html">
+            <img src="../../static/src/logo.webp" alt="Logo" />
           </a>
         </li>
         <li class="nav-item">
-          <a href="about.html">About</a>
+          <a href="../about.html">About</a>
         </li>
         <li class="nav-item">
-          <a href="./admin/login.html">Login</a>
+          <a href="../admin/login.html">Login</a>
         </li>
       </ul>
-      <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="../cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -64,9 +59,53 @@
         }
       </script>
     </nav>
-    <section class="section-container">
-      <h1>Your order has processed id 5cf5865f-732d-4cf8-8c5c-e84856cbf7d5</h1>
-      <a href="./admin/order_view_user.html" class="btn">View order</a>
+    <section class="section-section">
+      <div class="home-head">
+        <h1>Order 1</h1>
+      </div>
+      <div class="order-info">
+        <div class="order-information">
+          <p><strong>Order ID: </strong><small>1</small></p>
+          <p><strong>Order Date: </strong><small>2021-10-10</small></p>
+          <p><strong>Order Status: </strong><small>Delivered</small></p>
+          <p><strong>Payment Method: </strong><small>Credit Card</small></p>
+          <p><strong>Payment Status: </strong><small>Paid</small></p>
+          <p>
+            <strong>Shipping Address: </strong
+            ><small>1234 Main St, New York, NY</small>
+          </p>
+          <p><strong>Shipping Method: </strong><small>Standard</small></p>
+          <p><strong>Shipping Status: </strong><small>Shipped</small></p>
+        </div>
+        <div class="order-resume">
+          <table class="prod-table bg-white">
+            <thead class="table-head">
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr>
+                <td>Product 1</td>
+                <td>1</td>
+                <td>$100.00</td>
+              </tr>
+              <tr>
+                <td>Product 2</td>
+                <td>2</td>
+                <td>$200.00</td>
+              </tr>
+              <tr>
+                <td>Product 3</td>
+                <td>3</td>
+                <td>$300.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
     <footer>
       <div class="footer-content">
