@@ -300,6 +300,14 @@ th {
   display: none;
 }
 
+.section-container {
+  padding: 2rem;
+
+  table {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .bento {
     grid-template-columns: repeat(2, 1fr);

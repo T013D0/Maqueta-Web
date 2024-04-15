@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech - o - Computers</title>
+    <link rel="stylesheet" href="../../static/css/global.css" />
+    <link rel="stylesheet" href="../../static/css/navbar.css" />
+    <link rel="stylesheet" href="../../static/css/footer.css" />
+    <link rel="stylesheet" href="../../static/css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <div class="paste-button">
+            <a href="../store.html" class="button">Store</a>
+            <div class="dropdown-content">
+              <a id="top" href="../store/notebook.html">Notebooks</a>
+              <a id="middle" href="../store/desktop.html">Desktop</a>
+              <a id="bottom" href="../store/allinone.html">All in One</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-logo">
+          <a href="../index.html">
+            <img src="../../static/src/logo.webp" alt="Logo" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="login.html">Login</a>
+        </li>
+      </ul>
+      <a href="../cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-list");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+        }
+      </script>
+    </nav>
+    <section class="section-container">
+      <div class="home-head">
+        <h1>My Orders</h1>
+      </div>
+      <table class="prod-table bg-white">
+        <thead class="table-head">
+          <tr>
+            <th>Order ID</th>
+            <th>Product</th>
+            <th class="respon">Quantity</th>
+            <th class="respon">Price</th>
+            <th>Date</th>
+            <th class="respon">Address</th>
+            <th class="respon">Phone</th>
+            <th class="respon">Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          <tr>
+            <td>1</td>
+            <td>Desktop</td>
+            <td class="respon">1</td>
+            <td class="respon">$500</td>
+            <td>2021-10-10</td>
+            <td class="respon">1234 Main St</td>
+            <td class="respon">123-456-7890</td>
+            <td class="status respon">Delivered</td>
+            <td><a href="./order_view_user.html">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
