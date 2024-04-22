@@ -62,10 +62,19 @@
     <section class="section-container">
       <div class="form-container">
         <h1>REGISTER</h1>
-        <form class="login-form" action="./login.html" onsubmit="return validateForm()">
+        <form
+          class="login-form"
+          action="./login.html"
+          onsubmit="return validateForm()"
+        >
           <label for="username">
             Username
-            <input type="text" id="username" placeholder="username..." required />
+            <input
+              type="text"
+              id="username"
+              placeholder="username..."
+              required
+            />
           </label>
           <label for="email">
             Email
@@ -73,11 +82,21 @@
           </label>
           <label for="password">
             Password
-            <input type="password" id="password" placeholder="password..." required />
+            <input
+              type="password"
+              id="password"
+              placeholder="password..."
+              required
+            />
           </label>
           <label for="password2">
             Re enter Password
-            <input type="password" id="password2" placeholder="password..." required />
+            <input
+              type="password"
+              id="password2"
+              placeholder="password..."
+              required
+            />
           </label>
           <button>Register</button>
         </form>
@@ -97,13 +116,22 @@
             alert("Porfavor ingrese un correo electronico valido.");
             return false;
           }
-      
+
+          const passregex =
+            /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
+
           const password = document.getElementById("password");
-          if (password.value.length < 8) {
-            alert("La contraseña debe tener minimo ocho caracteres.");
+          if (!passregex.test(password.value)) {
+            alert(
+              "La contraseña debe tener al menos 8 caracteres.\n" +
+                "Debe contener al menos una letra mayúscula.\n" +
+                "Debe contener al menos una letra minúscula.\n" +
+                "Debe contener al menos un número.\n" +
+                "Debe contener al menos un caracter especial."
+            );
             return false;
           }
-      
+
           const password2 = document.getElementById("password2");
           if (password.value !== password2.value) {
             alert("Las contraseñas no coinciden.");
