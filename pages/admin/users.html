@@ -59,14 +59,15 @@
           <button class="btn">Search</button>
         </form>
       </div>
-      <table class="prod-table bg-white">
+      <table id="users" class="prod-table bg-white">
         <thead class="table-head">
           <tr>
             <th>Id</th>
             <th>Name</th>
             <th class="respon">Email</th>
             <th class="respon">Role</th>
-            <th class="respon">Addres</th>
+            <th class="respon">Address</th>
+            <th class="respon">Actions</th>
           </tr>
         </thead>
         <tbody class="table-body">
@@ -76,6 +77,10 @@
             <td class="respon">test@example.com</td>
             <td class="respon">Admin</td>
             <td class="respon">1234 Main St, New York, NY 10030</td>
+            <td class="respon">
+              <button class="edit-btn btn">Edit</button>
+              <button class="delete-btn btn">Delete</button>
+            </td>
           </tr>
           <tr>
             <td>2</td>
@@ -83,9 +88,15 @@
             <td class="respon">test@example.com</td>
             <td class="respon">User</td>
             <td class="respon">1234 Main St, New York, NY 10030</td>
+            <td class="respon">
+              <button class="edit-btn btn">Edit</button>
+              <button class="delete-btn btn">Delete</button>
+            </td>
           </tr>
         </tbody>
       </table>
+      <button id="addRowButton">Add User</button>
+      <script src="../../static/js/addUser.js"></script>
     </section>
   </body>
 </html>
