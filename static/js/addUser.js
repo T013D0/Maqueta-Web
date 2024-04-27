@@ -6,6 +6,8 @@ function pressAddRowButton() {
   addRowButton.dispatchEvent(clickEvent);
 }
 
+
+
 addRowButton.addEventListener("click", () => {
   const newRow = table.insertRow();
   const cell1 = newRow.insertCell();
@@ -95,7 +97,7 @@ addRowButton.addEventListener("click", () => {
 
           saveButton.remove();
           cancelButton.remove();
-          pressAddRowButton(); // Press the addRowButton after saving
+
         });
 
         cancelButton.addEventListener("click", () => {
@@ -113,7 +115,8 @@ addRowButton.addEventListener("click", () => {
 
           saveButton.remove();
           cancelButton.remove();
-          pressAddRowButton(); // Press the addRowButton after canceling
+         
+
         });
       });
     });
@@ -123,7 +126,7 @@ addRowButton.addEventListener("click", () => {
       button.addEventListener("click", () => {
         const row = button.parentElement.parentElement;
         table.deleteRow(row.rowIndex);
-        pressAddRowButton(); // Press the addRowButton after deleting
+        
       });
     });
   });
@@ -132,19 +135,11 @@ addRowButton.addEventListener("click", () => {
     // Remove the newRow instead of using newRow.remove()
     const newRowIndex = newRow.rowIndex;
     table.deleteRow(newRowIndex);
-    pressAddRowButton(); // Press the addRowButton after canceling
+
   });
 
-  // Add edit and delete buttons after creating the row
-  const editButton = document.createElement("button");
-  editButton.className = "edit-btn btn";
-  editButton.textContent = "Edit";
-  cell6.appendChild(editButton);
 
-  const deleteButton = document.createElement("button");
-  deleteButton.className = "delete-btn btn";
-  deleteButton.textContent = "Delete";
-  cell6.appendChild(deleteButton);
+ 
 
   // Add edit and delete functionality
   const editButtons = document.querySelectorAll(".edit-btn");
@@ -191,6 +186,7 @@ addRowButton.addEventListener("click", () => {
 
         saveButton.remove();
         cancelButton.remove();
+        
       });
 
       cancelButton.addEventListener("click", () => {
@@ -219,4 +215,8 @@ addRowButton.addEventListener("click", () => {
       table.deleteRow(row.rowIndex);
     });
   });
-});
+}
+)
+pressAddRowButton();;
+
+
