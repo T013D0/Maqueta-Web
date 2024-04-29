@@ -66,16 +66,23 @@
           class="login-form"
           action="./login.html"
           onsubmit="return validateForm()"
-        >
-          <label for="username">
-            Username
+        > <label for="ncompleto">
+              Nombre Completo
+              <input
+                type="text"
+                id="ncompleto"
+                placeholder="nombre completo..."
+                required
+              />
+          </label>
+          <label for="rut">
+            RUT
             <input
               type="text"
-              id="username"
-              placeholder="username..."
+              id="rut"
+              placeholder="numero de rut..."
               required
             />
-          </label>
           <label for="email">
             Email
             <input type="email" id="email" placeholder="email..." required />
