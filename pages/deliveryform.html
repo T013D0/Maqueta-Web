@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech - o - Computers</title>
-    <link rel="stylesheet" href="../../static/css/global.css" />
-    <link rel="stylesheet" href="../../static/css/navbar.css" />
-    <link rel="stylesheet" href="../../static/css/footer.css" />
-    <link rel="stylesheet" href="../../static/css/login.css" />
+    <link rel="stylesheet" href="../static/css/global.css" />
+    <link rel="stylesheet" href="../static/css/navbar.css" />
+    <link rel="stylesheet" href="../static/css/footer.css" />
+    <link rel="stylesheet" href="../static/css/login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -41,7 +41,7 @@
           <a href="login.html">Login</a>
         </li>
       </ul>
-      <a href="../cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -61,56 +61,70 @@
     </nav>
     <section class="section-container">
       <div class="form-container">
-        <h1>REGISTER</h1>
+        <h1>DELIVERY FORM</h1>
         <form
           class="login-form"
-          action="./login.html"
+          action="./payment.html"
           onsubmit="return validateForm()"
-        > <label for="ncompleto">
-              Nombre Completo
-              <input
-                type="text"
-                id="ncompleto"
-                placeholder="nombre completo..."
-                required
-              />
-          </label>
-          <label for="rut">
-            RUT
+        >
+          <label for="adress">
+            Adress
             <input
               type="text"
-              id="rut"
-              placeholder="numero de rut..."
+              id="adress"
+              placeholder="adress..."
               required
             />
-          <label for="email">
-            Email
-            <input type="email" id="email" placeholder="email..." required />
           </label>
-          <label for="password">
-            Password
+          <label for="city">
+            City
             <input
-              type="password"
-              id="password"
-              placeholder="password..."
+              type="text"
+              id="city"
+              placeholder="city..."
               required
             />
           </label>
-          <label for="password2">
-            Re enter Password
+          <label for="region">
+            Region
+            <select id="region" name="region" required>
+              <option value="">Select a region...</option>
+              <option value="RM">Región Metropolitana</option>
+              <option value="VP">Región de Valparaíso</option>
+              <option value="LI">Región del Libertador Bernardo O'Higgins</option>
+              <option value="ML">Región del Maule</option>
+              <option value="ÑU">Región de Ñuble</option>
+              <option value="BI">Región del Biobío</option>
+              <option value="AR">Región de la Araucanía</option>
+              <option value="LR">Región de Los Ríos</option>
+              <option value="LL">Región de Los Lagos</option>
+              <option value="AI">Región Aysén del General Carlos Ibáñez del Campo</option>
+              <option value="MG">Región de Magallanes y de la Antártica Chilena</option>
+            </select>
+          </label>
+          <label for="shipping">
+            Shipping Method
+            <select id="shipping" name="shipping" required>
+              <option value="">Select a shipping method...</option>
+              <option value="S">STANDARD (48h-72h)</option>
+              <option value="P">PREMIUM (12h-24h)</option>
+            </select>
+          </label>
+          <label for="postal">
+            Postal Code
             <input
-              type="password"
-              id="password2"
-              placeholder="password..."
+              type="text"
+              id="postalcode"
+              placeholder="postal code..."
               required
             />
           </label>
-          <button>Register</button>
+          <button>Confirm Delivery Info</button>
         </form>
         <h4 class="or">Or</h4>
-        <a class="register-btn" href="./login.html">Sign in</a>
+        <a class="register-btn" href="./cart.html">Back to Shopping Cart</a>
       </div>
-      <script src="../../static/js/formValidate.js"></script>
+      <script src="../static/js/deliveryValidate.js"></script>
     </section>
     <footer>
       <div class="footer-content">
