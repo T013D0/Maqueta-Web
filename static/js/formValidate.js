@@ -1,9 +1,15 @@
 function validateForm() {
-  const username = document.getElementById("username");
-  if (username.value.length < 3) {
+  const ncompleto = document.getElementById("ncompleto");
+  if (ncompleto.value.length < 3) {
     alert("Nombre de usuario debe ser mayor a tres caracteres.");
     return false;
   }
+  const rutLeng= /^[0-9]{7,8}$/;
+    const rut = document.getElementById("rut");
+    if (!rutLeng.test(rut.value)) {
+      alert("Numero de rut debe ser menor a 8 y mayor o igual a 6.");
+      return false;
+    }
   const email = document.getElementById("email");
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (!emailRegex.test(email.value)) {
