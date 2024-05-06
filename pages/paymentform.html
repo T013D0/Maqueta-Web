@@ -7,46 +7,41 @@
     <link rel="stylesheet" href="../static/css/global.css" />
     <link rel="stylesheet" href="../static/css/navbar.css" />
     <link rel="stylesheet" href="../static/css/footer.css" />
-    <link rel="stylesheet" href="../static/css/cart.css" />
+    <link rel="stylesheet" href="../static/css/login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <nav class="">
+    <nav>
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="index.html">Home</a>
+          <a href="../index.html">Home</a>
         </li>
         <li class="nav-item">
           <div class="paste-button">
-            <a href="store.html" class="button">Store</a>
+            <a href="../store.html" class="button">Store</a>
             <div class="dropdown-content">
-              <a id="top" href="./store/notebook.html">Notebooks</a>
-              <a id="middle" href="./store/desktop.html">Desktop</a>
-              <a id="bottom" href="./store/allinone.html">All in One</a>
+              <a id="top" href="../store/notebook.html">Notebooks</a>
+              <a id="middle" href="../store/desktop.html">Desktop</a>
+              <a id="bottom" href="../store/allinone.html">All in One</a>
             </div>
           </div>
         </li>
         <li class="nav-logo">
-          <a href="index.html">
-            <img src="../static/src/logo.webp" alt="Logo" />
+          <a href="../index.html">
+            <img src="../../static/src/logo.webp" alt="Logo" />
           </a>
         </li>
         <li class="nav-item">
-          <a href="about.html">About</a>
+          <a href="../about.html">About</a>
         </li>
         <li class="nav-item">
-          <a href="./admin/login.html">Login</a>
+          <a href="login.html">Login</a>
         </li>
       </ul>
-      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -65,54 +60,46 @@
       </script>
     </nav>
     <section class="section-container">
-      <table class="table">
-        <thead>
-          <th>
-            <tr class="table-row">
-              <td>Product</td>
-              <td>Price</td>
-              <td>Quantity</td>
-              <td>Total</td>
-            </tr>
-          </th>
-        </thead>
-        <tbody class="bg-nav">
-          <tr class="table-row-body">
-            <td>Product 1</td>
-            <td>$100</td>
-            <td class="quantity">2</td>
-            <td>$200</td>
-          </tr>
-          <tr class="table-row-body">
-            <td>Product 2</td>
-            <td>$150</td>
-            <td class="quantity">1</td>
-            <td>$150</td>
-          </tr>
-          <tr class="table-row-body">
-            <td>Product 3</td>
-            <td>$200</td>
-            <td class="quantity">1</td>
-            <td>$200</td>
-          </tr>
-          <tr class="table-row-body">
-            <td>Product 4</td>
-            <td>$250</td>
-            <td class="quantity">1</td>
-            <td>$250</td>
-          </tr>
-          <tr class="table-row-body">
-            <td>Product 5</td>
-            <td>$300</td>
-            <td class="quantity">1</td>
-            <td>$300</td>
-          </tr>
-        </tbody>
-      </table>
-      <section class="buttons-container">
-        <a href="./paymentform.html" class="btn">Go to payment</a>
-        <a href="./store.html" class="btn">Continue shopping</a>
-      </section>
+      <div class="form-container">
+        <h1>PAYMENT FORM</h1>
+        <form
+          class="login-form"
+          action="./deliveryform.html"
+          onsubmit="return validateForm()"
+        >
+          <label for="ccinfo">
+            Credit Card Info
+            <input
+              type="text"
+              id="ccinfo"
+              placeholder="credit card info..."
+              required
+            />
+          </label>
+          <label for="ccdate">
+            Expiration Date
+            <input
+              type="text"
+              id="ccdate"
+              placeholder="credit card expiration date..."
+              required
+            />
+          </label>
+          <label for="cccode">
+            CCV
+            <input
+              type="text"
+              id="cccode"
+              placeholder="credit card reverse code..."
+              required
+            />
+          </label>
+          <button>Confirm Payment Info</button>
+        </form>
+        <h4 class="or">Or</h4>
+        <a class="register-btn" href="./cart.html">Back to Shopping Cart</a>
+      </div>
+      <script src="../static/js/paymentValidate.js"></script>
     </section>
     <footer>
       <div class="footer-content">
@@ -126,23 +113,23 @@
         <div class="footer-section links">
           <h1>Quick Links</h1>
           <ul>
-            <a href="index.html">
+            <a href="../index.html">
               <li>Home</li>
             </a>
-            <a href="store.html">
+            <a href="../store.html">
               <li>Store</li>
             </a>
-            <a href="about.html">
+            <a href="../about.html">
               <li>About</li>
             </a>
-            <a href="support.html">
+            <a href="../support.html">
               <li>Login</li>
             </a>
           </ul>
         </div>
         <div class="footer-section contact-form">
           <h1>Contact us</h1>
-          <form action="index.html" method="post">
+          <form action="../index.html" method="post">
             <input
               type="email"
               name="email"
