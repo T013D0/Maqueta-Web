@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../static/css/navbar.css" />
     <link rel="stylesheet" href="../static/css/footer.css" />
     <link rel="stylesheet" href="../static/css/login.css" />
+    <link rel="stylesheet" href="../static/css/forms.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -60,71 +62,72 @@
       </script>
     </nav>
     <section class="section-container">
-      <div class="form-container">
-        <h1>DELIVERY FORM</h1>
+      <div class="modal">
+        <h1>DELIVERY</h1>
         <form
-          class="login-form"
-          action="./payment.html"
+          class="form"
+          action="./deliveryform.html"
           onsubmit="return validateForm()"
         >
-          <label for="adress">
-            Adress
-            <input
-              type="text"
-              id="adress"
-              placeholder="adress..."
-              required
-            />
-          </label>
-          <label for="city">
-            City
-            <input
-              type="text"
-              id="city"
-              placeholder="city..."
-              required
-            />
-          </label>
-          <label for="region">
-            Region
-            <select id="region" name="region" required>
-              <option value="">Select a region...</option>
-              <option value="RM">Región Metropolitana</option>
-              <option value="VP">Región de Valparaíso</option>
-              <option value="LI">Región del Libertador Bernardo O'Higgins</option>
-              <option value="ML">Región del Maule</option>
-              <option value="ÑU">Región de Ñuble</option>
-              <option value="BI">Región del Biobío</option>
-              <option value="AR">Región de la Araucanía</option>
-              <option value="LR">Región de Los Ríos</option>
-              <option value="LL">Región de Los Lagos</option>
-              <option value="AI">Región Aysén del General Carlos Ibáñez del Campo</option>
-              <option value="MG">Región de Magallanes y de la Antártica Chilena</option>
-            </select>
-          </label>
-          <label for="shipping">
-            Shipping Method
-            <select id="shipping" name="shipping" required>
-              <option value="">Select a shipping method...</option>
-              <option value="S">STANDARD (48h-72h)</option>
-              <option value="P">PREMIUM (12h-24h)</option>
-            </select>
-          </label>
-          <label for="postal">
-            Postal Code
-            <input
-              type="text"
-              id="postalcode"
-              placeholder="postal code..."
-              required
-            />
-          </label>
-          <button>Confirm Delivery Info</button>
+          <div class="credit-card-info--form">
+            <div class="input_container">
+              <label for="password_field" class="input_label">Adress</label>
+              <input
+                required
+                id="adress_field"
+                class="input_field"
+                type="text"
+                name="input-name"
+                title="Inpit title"
+                placeholder="Enter your Adress"
+              />
+            </div>
+            <div class="input_container">
+              <label for="password_field" class="input_label">City</label>
+              <input
+                required
+                id="city_field"
+                class="input_field"
+                type="text"
+                name="input-name"
+                title="Inpit title"
+                placeholder="Enter your city name"
+              />
+            </div>
+            <div class="split">
+              <div class="input_container">
+                <label for="password_field" class="input_label">Zip Code</label>
+                <input
+                  required
+                  id="zip_field"
+                  class="input_field"
+                  type="number"
+                  name="input-name"
+                  title="Inpit title"
+                  placeholder="Enter your zip code"
+                />
+              </div>
+              <div class="input_container">
+                <label for="region" class="input_label">Region</label>
+                <select required name="region" id="region">
+                  <option value="">Select your region</option>
+                </select>
+              </div>
+            </div>
+            <div class="input_container">
+              <label for="region" class="input_label">Shipping Method</label>
+              <select id="shipping" name="shipping" required>
+                <option value="">Select a shipping method...</option>
+                <option value="S">STANDARD (48h-72h)</option>
+                <option value="P">PREMIUM (12h-24h)</option>
+              </select>
+            </div>
+          </div>
+          <button class="purchase--btn">Confirm Delivery</button>
         </form>
-        <h4 class="or">Or</h4>
-        <a class="register-btn" href="./cart.html">Back to Shopping Cart</a>
       </div>
       <script src="../static/js/deliveryValidate.js"></script>
+      <script src="../static/js/delivery.js"></script>
     </section>
     <footer>
       <div class="footer-content">
