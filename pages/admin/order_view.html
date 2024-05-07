@@ -56,7 +56,14 @@
         <div class="order-information">
           <p><strong>Order ID: </strong><small>1</small></p>
           <p><strong>Order Date: </strong><small>2021-10-10</small></p>
-          <p><strong>Order Status: </strong><small>Delivered</small></p>
+          <p><strong>Order Status: </strong><small>
+            <select name="status" id="status">
+              <option value="D">Delivered</option>
+              <option value="P">Pending</option>
+              <option value="C">Canceled</option>
+              <option value="DE">Denied</option>
+            </select>
+          </small></p>
           <p><strong>Payment Method: </strong><small>Credit Card</small></p>
           <p><strong>Payment Status: </strong><small>Paid</small></p>
           <p>

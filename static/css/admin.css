@@ -308,6 +308,19 @@ th {
   }
 }
 
+select{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  padding: 0.25rem;
+  border-radius: 5px;
+}
+option{
+  background-color: var(--bg-color);
+  color: white;
+}
+
 @media (max-width: 1200px) {
   .bento {
     grid-template-columns: repeat(2, 1fr);
